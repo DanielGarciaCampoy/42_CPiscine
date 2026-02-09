@@ -23,7 +23,9 @@ int	ft_str_is_lowercase(char *str)
 int	main(void)
 {
 	printf("%d\n", ft_str_is_lowercase(""));
+	printf("%d\n", ft_str_is_lowercase("Prueba"));
 	printf("%d\n", ft_str_is_lowercase("prueba"));
+	printf("%d\n", ft_str_is_lowercase("PRUEBA"));
 	printf("%d\n", ft_str_is_lowercase("prueba1"));
 	printf("%d\n", ft_str_is_lowercase("prueba1-."));
 	return (0);
