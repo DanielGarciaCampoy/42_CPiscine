@@ -1,14 +1,30 @@
+#include <stdio.h>
 
+int	is_numeric(char c)
+{
+	return (c >= '0' && c <= '9');
+}
 
 int	ft_str_is_numeric(char *str)
 {
-	int i;
-	int ret;
+	int	i;
 
 	i = 0;
-	ret = 1;
 	while (str[i] != '\0')
 	{
-		
+		if (is_numeric (str[i]))
+			i++;
+		else
+			return (0);
 	}
+	return (1);
+}
+
+int	main(void)
+{
+	printf("%d\n", ft_str_is_numeric("1234"));
+	printf("%d\n", ft_str_is_numeric("1234a"));
+	printf("%d\n", ft_str_is_numeric("1234.-"));
+	printf("%d\n", ft_str_is_numeric(""));
+	return (0);
 }
